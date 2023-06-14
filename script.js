@@ -2,7 +2,7 @@ const getData = async (url) => {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    sendData('https://example.com', data); 
+    sendData('https://jsonplaceholder.typicode.com/posts', data); 
   } catch (error) {
     console.log('Ошибка получения данных:', error);
   }
@@ -42,4 +42,4 @@ form.addEventListener('submit', (e) => {
     });
 });
 
-getData('https://example.com/db.json'); 
+getData('https://jsonplaceholder.typicode.com/posts'); 
